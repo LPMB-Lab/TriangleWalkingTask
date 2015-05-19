@@ -159,39 +159,51 @@ def GenerateTrials():
 	# Right Start Trials
 	rightStartTrials = []
 
-	# Add Left/Right/No GVS for both triangles with leftStart
+	# Trial generation
 	for i in range (0, 3):
+		
+		# Left Triangle Right GVS
 		trial = [EQUIL_LEFT_TRIANGLE, RIGHT_GVS]
 		leftStartTrials.append(trial)
 		
+		# Left Triangle Left GVS
 		trial = [EQUIL_LEFT_TRIANGLE, LEFT_GVS]
 		leftStartTrials.append(trial)
 		
-		trial = [BAD_LEFT_TRIANGLE, NO_GVS]
-		leftStartTrials.append(trial)
-		leftStartTrials.append(trial)
-		
+		# Left Triangle No GVS
 		trial = [EQUIL_LEFT_TRIANGLE, NO_GVS]
 		leftStartTrials.append(trial)
 		leftStartTrials.append(trial)
 		
+		# Left Bad Triangle No GVS
+		trial = [BAD_LEFT_TRIANGLE, NO_GVS]
+		leftStartTrials.append(trial)
+		leftStartTrials.append(trial)
+		
+		# Right Triangle Right GVS
 		trial = [EQUIL_RIGHT_TRIANGLE, RIGHT_GVS]
 		rightStartTrials.append(trial)
 		
+		# Right Triangle Left GVS
 		trial = [EQUIL_RIGHT_TRIANGLE, LEFT_GVS]
 		rightStartTrials.append(trial)
 		
+		# Right Triangle No GVS
 		trial = [EQUIL_RIGHT_TRIANGLE, NO_GVS]
 		rightStartTrials.append(trial)
 		rightStartTrials.append(trial)
 		
+		# Right Bad Triangle No GVS
 		trial = [BAD_RIGHT_TRIANGLE, NO_GVS]
 		rightStartTrials.append(trial)
 		rightStartTrials.append(trial)
 
+	# Shuffle the Trials
 	random.shuffle(leftStartTrials)
 	random.shuffle(rightStartTrials)
 
+	# Add the left/right trials to the main trials one after another
+	# so that the start position alternates from left/right
 	for i in range (0, len(leftStartTrials)):
 		trials.append(leftStartTrials[i])
 		trials.append(rightStartTrials[i])
