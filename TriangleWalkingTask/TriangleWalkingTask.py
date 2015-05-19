@@ -266,7 +266,6 @@ def testPhase():
 				viz.scene(1)
 
 	info.setText('Thank You. You have completed the experiment')
-	info.visible(viz.ON)
 
 def experiment():
 
@@ -275,7 +274,6 @@ def experiment():
 	
 	#Wait for spacebar to begin experiment
 	yield viztask.waitKeyDown(KEYS['start'])
-	
 	yield learnPhase()
 	yield testPhase()
 
