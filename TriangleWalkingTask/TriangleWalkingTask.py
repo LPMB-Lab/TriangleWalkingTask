@@ -95,11 +95,6 @@ if profile:
 else:
 	viewLink.setOffset([0,1.8,0])
 
-# Create canvas for display UI to user
-canvas = viz.addGUICanvas()
-canvas.setMouseStyle(viz.CANVAS_MOUSE_VIRTUAL)
-canvas.setCursorPosition([0,0])
-
 # Hide and trap mouse since we will be using virtual canvas mouse
 viz.mouse.setVisible(False)
 viz.mouse.setTrap(True)
