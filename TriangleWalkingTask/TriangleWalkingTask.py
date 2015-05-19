@@ -253,7 +253,7 @@ def testPhase():
 				AddCylinder(viz.GREEN, trials[i][0][j])
 				print("Created cylinder #" + str(j+1))
 			
-			sensor = cylinderSensors[j + 3*i] + len(learnCylinderLocations)
+			sensor = cylinderSensors[j + 3*i + len(learnCylinderLocations)]
 			print("Waiting for sensor collision with sensor #" + str(j+1))
 			info.setText(trials[i][1])
 			yield vizproximity.waitEnter(sensor)
