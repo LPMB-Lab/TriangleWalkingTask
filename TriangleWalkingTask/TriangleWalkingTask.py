@@ -236,11 +236,9 @@ def learnPhase():
 		yield vizproximity.waitEnter(sensor)
 
 	info.setText("Calibration is complete.")
-	info.visible(viz.ON)
 	
 	# Start testing phase after 5 seconds
 	yield viztask.waitTime(5)
-	info.visible(viz.OFF)
 
 def testPhase():
 	
