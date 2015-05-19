@@ -17,8 +17,6 @@ import array
 
 # Key commands
 KEYS = { 'reset'	: 'r'
-		,'camera'	: 'c'
-		,'help'		: 'h'
 		,'debug'	: 'd'
 		,'start'	: 's'
 		,'nextTrial': ' '
