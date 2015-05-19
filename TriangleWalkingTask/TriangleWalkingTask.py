@@ -40,25 +40,29 @@ learnCylinderLocations = [
 BAD_LEFT_TRIANGLE = [
 	[-1,0,-1.5],
 	[-1,0,1.5],
-	[1,0,1.5]
+	[1,0,1.5],
+	["BAD_LEFT"]
 ]
 
 BAD_RIGHT_TRIANGLE = [
 	[1,0,-1.5],
 	[1,0,1.5],
-	[-1,0,1.5]
+	[-1,0,1.5],
+	["BAD_RIGHT"]
 ]
 
 EQUIL_LEFT_TRIANGLE = [
 	[-1.5,0,-1.5],
 	[-1.5,0,1.5],
-	[1.5,0,1.5]
+	[1.5,0,1.5],
+	["EQUIL_LEFT_TRIANGLE"]
 ]
 
 EQUIL_RIGHT_TRIANGLE = [
 	[1.5,0,-1.5],
 	[1.5,0,1.5],
-	[-1.5,0,1.5]
+	[-1.5,0,1.5],
+	["EQUIL_RIGHT_TRIANGLE"]
 ]
 
 # The actual trials will be stored here
@@ -106,7 +110,6 @@ viz.mouse.setTrap(True)
 # This part is to be uncommented for the Optotrack stuff!
 # Linking the avatar to the Optotrack rigid bodies
 opto = viz.add('optotrak.dle', 0, OPTOTRAK_IP)
-
 body = opto.getBody(0)
 optoLink = viz.link(body, viz.MainView, mask=viz.LINK_POS)
 	
@@ -250,7 +253,7 @@ def testPhase():
 				AddCylinder(viz.GREEN, trials[i][0][j])
 				print("Created cylinder #" + str(j+1))
 			
-			sensor = cylinderSensors[j + 3*i]# + len(learnCylinderLocations)
+			sensor = cylinderSensors[j + 3*i] + len(learnCylinderLocations)
 			print("Waiting for sensor collision with sensor #" + str(j+1))
 			info.setText(trials[i][1])
 			yield vizproximity.waitEnter(sensor)
@@ -272,7 +275,7 @@ def experiment():
 	#Wait for spacebar to begin experiment
 	yield viztask.waitKeyDown(KEYS['start'])
 	
-	#yield learnPhase()
+	yield learnPhase()
 	yield testPhase()
 
 	#Log results to file
