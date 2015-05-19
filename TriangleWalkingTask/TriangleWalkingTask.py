@@ -223,7 +223,6 @@ def learnPhase():
 
 	# Hide instructions after 5 seconds
 	yield viztask.waitTime(5)
-	info.visible(viz.OFF)
 
 	for i in range (0,6):
 		
