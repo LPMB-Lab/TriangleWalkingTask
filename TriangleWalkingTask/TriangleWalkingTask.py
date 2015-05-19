@@ -117,13 +117,6 @@ optoLink = viz.link(body, viz.MainView, mask=viz.LINK_POS)
 #Set up the environment and proximity sensors
 scene = viz.addChild('newMaze.osgb')
 
-#walls = scene.getChild('maze_piece')
-#wallLights = scene.getChild('maze_piece_lights')
-#walls.visible(viz.OFF)
-#wallLights.visible(viz.OFF)
-
-#ceiling = scene.getChild('ceiling')
-
 #Create proximity manager and set debug on. Toggle debug with d key
 manager = vizproximity.Manager()
 manager.setDebug(viz.ON)
