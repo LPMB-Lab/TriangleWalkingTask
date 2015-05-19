@@ -115,12 +115,14 @@ optoLink = viz.link(body, viz.MainView, mask=viz.LINK_POS)
 #####################
 
 #Set up the environment and proximity sensors
-scene = viz.addChild('maze.osgb')
+scene = viz.addChild('newMaze.osgb')
 
-walls = scene.getChild('maze_piece')
-wallLights = scene.getChild('maze_piece_lights')
-walls.visible(viz.OFF)
-wallLights.visible(viz.OFF)
+#walls = scene.getChild('maze_piece')
+#wallLights = scene.getChild('maze_piece_lights')
+#walls.visible(viz.OFF)
+#wallLights.visible(viz.OFF)
+
+#ceiling = scene.getChild('ceiling')
 
 #Create proximity manager and set debug on. Toggle debug with d key
 manager = vizproximity.Manager()
@@ -255,8 +257,9 @@ def testPhase():
 				AddCylinder(viz.GREEN, trials[i][0][j])
 				print("Created cylinder #" + str(j+1))
 			
-			sensor = cylinderSensors[j + 3*i] + len(learnCylinderLocations)
+			sensor = cylinderSensors[j + 3*i]# + len(learnCylinderLocations)
 			print("Waiting for sensor collision with sensor #" + str(j+1))
+			info.setText(trials[i][1])
 			yield vizproximity.waitEnter(sensor)
 			
 			if (j == 2):
@@ -276,7 +279,7 @@ def experiment():
 	#Wait for spacebar to begin experiment
 	yield viztask.waitKeyDown(KEYS['start'])
 	
-	yield learnPhase()
+	#yield learnPhase()
 	yield testPhase()
 
 	#Log results to file
