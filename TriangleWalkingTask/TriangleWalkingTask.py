@@ -103,13 +103,13 @@ viz.mouse.setTrap(True)
 ## OPTOTRAK3
 #####################
 
-#This part is to be uncommented for the Optotrack stuff!
+# This part is to be uncommented for the Optotrack stuff!
 # Linking the avatar to the Optotrack rigid bodies
 opto = viz.add('optotrak.dle', 0, OPTOTRAK_IP)
 
 body = opto.getBody(0)
 optoLink = viz.link(body, viz.MainView, mask=viz.LINK_POS)
-
+	
 #####################
 ## SIMULATION
 #####################
@@ -144,7 +144,7 @@ def AddCylinder(color, position):
 	cylinder.setPosition(position)
 	cylinder.color(color)
 	
-	sensor = vizproximity.addBoundingBoxSensor(cylinder,scale=(1,5,1))
+	sensor = vizproximity.addBoundingBoxSensor(cylinder,scale=(1,1,1))
 	
 	cylinderSensors.append(sensor)
 	
