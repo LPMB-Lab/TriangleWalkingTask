@@ -222,7 +222,7 @@ def learnPhase():
 	# Hide instructions after 5 seconds
 	yield viztask.waitTime(5)
 
-	for i in range (0,6):
+	for i in range (0,len(learnCylinderLocations)):
 		
 		AddCylinder(viz.RED, learnCylinderLocations[i])
 
