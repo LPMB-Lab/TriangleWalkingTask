@@ -24,6 +24,8 @@ KEYS = { 'reset'	: 'r'
 
 OPTOTRAK_IP = '192.219.236.36'
 
+NUMBER_OF_TRIAL_RUNS = 1
+
 NO_GVS 		= "NGVS"
 LEFT_GVS 	= "LGVS"
 RIGHT_GVS 	= "RGVS"
@@ -36,7 +38,6 @@ learnCylinderLocations = [
 	[1.5,0,-1.5]]
 	
 # 4 Triangles for testing
-
 BAD_LEFT_TRIANGLE = [
 	[-1,0,-1.5],
 	[-1,0,1.5],
@@ -215,9 +216,9 @@ info = vizinfo.InfoPanel("Explore the environment")
 
 def learnPhase():
 
+	
 	# Provide instructions for the participant
 	info.setText("Walk to each pillar that appears.")
-	info.visible(viz.ON)
 
 	# Hide instructions after 5 seconds
 	yield viztask.waitTime(5)
