@@ -24,8 +24,6 @@ KEYS = { 'reset'	: 'r'
 
 OPTOTRAK_IP = '192.219.236.36'
 
-NUMBER_OF_TRIAL_RUNS = 1
-
 NO_GVS 		= "NGVS"
 LEFT_GVS 	= "LGVS"
 RIGHT_GVS 	= "RGVS"
