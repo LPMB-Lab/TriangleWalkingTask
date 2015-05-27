@@ -135,6 +135,13 @@ def EnterCylinder(e, cylinder):
 #add cylinders and create a proximity sensor around each one
 cylinderSensors = []
 
+#Add a sensor in the center of the room for the participant to return to after each trial
+centerSensor = vizproximity.Sensor(vizproximity.CircleArea(1.5,center=(0.0,0.0)),None)
+manager.addSensor(centerSensor)
+
+#Add vizinfo panel to display instructions
+info = vizinfo.InfoPanel("Explore the environment")
+
 def AddCylinder(color, position):
 
 	cylinder = vizshape.addCylinder(height=5,radius=0.2)
@@ -205,13 +212,6 @@ def GenerateTrials():
 		trials.append(leftStartTrials[i])
 		trials.append(rightStartTrials[i])
 
-#Add a sensor in the center of the room for the participant to return to after each trial
-centerSensor = vizproximity.Sensor(vizproximity.CircleArea(1.5,center=(0.0,0.0)),None)
-manager.addSensor(centerSensor)
-
-#Add vizinfo panel to display instructions
-info = vizinfo.InfoPanel("Explore the environment")
-
 def learnPhase():
 
 	
@@ -262,6 +262,7 @@ def testPhase():
 				viz.scene(2)
 				yield viztask.waitKeyDown(KEYS['nextTrial'])
 				viz.scene(1)
+
 
 	info.setText('Thank You. You have completed the experiment')
 
