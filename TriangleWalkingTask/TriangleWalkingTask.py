@@ -10,6 +10,7 @@ import vizmat
 import math
 import time
 import array
+import datetime
 
 ###################
 ##  CONSTANTS
@@ -106,7 +107,7 @@ viz.mouse.setTrap(True)
 ## OPTOTRAK3
 #####################
 
-# This part is to be uncommented for the Optotrack stuff!
+# This part is to be uncommented for the Optotrack stuff
 # Linking the avatar to the Optotrack rigid bodies
 opto = viz.add('optotrak.dle', 0, OPTOTRAK_IP)
 body = opto.getBody(0)
@@ -142,6 +143,19 @@ manager.addSensor(centerSensor)
 #Add vizinfo panel to display instructions
 info = vizinfo.InfoPanel("Explore the environment")
 
+def ExportTrials():
+	i = datetime.datetime.now()
+	fileName = "%s_%s_%s_%s_%s_%s.txt" % (i.year, i.month, i.day, i.hour, i.minute, i.second)
+	print fileName
+	
+	
+	export_data = open(str(fileName), 'a')
+	
+	for i in range (0, len(trials)):
+		export_data.write( str(i+1) + ". " + str(trials[i][1]) + ", " + str(trials[i][0][3][0]) + "\n")
+		
+	export_data.flush()
+		
 def AddCylinder(color, position):
 
 	cylinder = vizshape.addCylinder(height=5,radius=0.2)
@@ -270,6 +284,8 @@ def experiment():
 
 	# Generate the trials
 	GenerateTrials()
+	
+	ExportTrials()
 	
 	#Wait for spacebar to begin experiment
 	yield viztask.waitKeyDown(KEYS['start'])
