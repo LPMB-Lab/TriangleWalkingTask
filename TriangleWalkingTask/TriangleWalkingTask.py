@@ -51,18 +51,18 @@ BAD_RIGHT_TRIANGLE = [
 	["BAD_RIGHT"]
 ]
 
-EQUIL_LEFT_TRIANGLE = [
-	[-1.35,0,-1.2],
-	[-1.35,0,1.5],
-	[1.35,0,1.5],
-	["EQUIL_LEFT_TRIANGLE"]
+THREE_TWO_LEFT_TRIANGLE = [
+	[-1,0,-1.5],
+	[-1,0,1.5],
+	[1,0,1.5],
+	["THREE_TWO_LEFT_TRIANGLE"]
 ]
 
-EQUIL_RIGHT_TRIANGLE = [
-	[1.35,0,-1.2],
-	[1.35,0,1.5],
-	[-1.35,0,1.5],
-	["EQUIL_RIGHT_TRIANGLE"]
+THREE_TWO_RIGHT_TRIANGLE = [
+	[1,0,-1.5],
+	[1,0,1.5],
+	[-1,0,1.5],
+	["THREE_TWO_RIGHT_TRIANGLE"]
 ]
 
 # The actual trials will be stored here
