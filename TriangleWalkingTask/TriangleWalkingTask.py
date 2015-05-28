@@ -181,38 +181,54 @@ def GenerateTrials():
 	for i in range (0, 3):
 		
 		# Left Triangle Right GVS
-		trial = [EQUIL_LEFT_TRIANGLE, RIGHT_GVS]
+		trial = [THREE_TWO_LEFT_TRIANGLE, RIGHT_GVS]
 		leftStartTrials.append(trial)
 		
 		# Left Triangle Left GVS
-		trial = [EQUIL_LEFT_TRIANGLE, LEFT_GVS]
+		trial = [THREE_TWO_LEFT_TRIANGLE, LEFT_GVS]
 		leftStartTrials.append(trial)
 		
 		# Left Triangle No GVS
-		trial = [EQUIL_LEFT_TRIANGLE, NO_GVS]
+		trial = [THREE_TWO_LEFT_TRIANGLE, NO_GVS]
 		leftStartTrials.append(trial)
 		leftStartTrials.append(trial)
 		
-		# Left Bad Triangle No GVS
-		trial = [BAD_LEFT_TRIANGLE, NO_GVS]
+		# Left Triangle2 Right GVS
+		trial = [TWO_THREE_LEFT_TRIANGLE, RIGHT_GVS]
+		leftStartTrials.append(trial)
+		
+		# Left Triangle2 Left GVS
+		trial = [TWO_THREE_LEFT_TRIANGLE, LEFT_GVS]
+		leftStartTrials.append(trial)
+		
+		# Left Triangle2 No GVS
+		trial = [TWO_THREE_LEFT_TRIANGLE, NO_GVS]
 		leftStartTrials.append(trial)
 		leftStartTrials.append(trial)
 		
 		# Right Triangle Right GVS
-		trial = [EQUIL_RIGHT_TRIANGLE, RIGHT_GVS]
+		trial = [THREE_TWO_RIGHT_TRIANGLE, RIGHT_GVS]
 		rightStartTrials.append(trial)
 		
 		# Right Triangle Left GVS
-		trial = [EQUIL_RIGHT_TRIANGLE, LEFT_GVS]
+		trial = [THREE_TWO_RIGHT_TRIANGLE, LEFT_GVS]
 		rightStartTrials.append(trial)
 		
 		# Right Triangle No GVS
-		trial = [EQUIL_RIGHT_TRIANGLE, NO_GVS]
+		trial = [THREE_TWO_RIGHT_TRIANGLE, NO_GVS]
 		rightStartTrials.append(trial)
 		rightStartTrials.append(trial)
 		
-		# Right Bad Triangle No GVS
-		trial = [BAD_RIGHT_TRIANGLE, NO_GVS]
+		# Right Triangle2 Right GVS
+		trial = [TWO_THREE_LEFT_TRIANGLE, RIGHT_GVS]
+		rightStartTrials.append(trial)
+		
+		# Right Triangle2 Left GVS
+		trial = [TWO_THREE_LEFT_TRIANGLE, LEFT_GVS]
+		rightStartTrials.append(trial)
+		
+		# Right Triangle2 Right GVS
+		trial = [TWO_THREE_LEFT_TRIANGLE, NO_GVS]
 		rightStartTrials.append(trial)
 		rightStartTrials.append(trial)
 
