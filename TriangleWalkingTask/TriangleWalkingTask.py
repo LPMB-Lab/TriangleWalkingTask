@@ -220,15 +220,15 @@ def GenerateTrials():
 		rightStartTrials.append(trial)
 		
 		# Right Triangle2 Right GVS
-		trial = [TWO_THREE_LEFT_TRIANGLE, RIGHT_GVS]
+		trial = [TWO_THREE_RIGHT_TRIANGLE, RIGHT_GVS]
 		rightStartTrials.append(trial)
 		
 		# Right Triangle2 Left GVS
-		trial = [TWO_THREE_LEFT_TRIANGLE, LEFT_GVS]
+		trial = [TWO_THREE_RIGHT_TRIANGLE, LEFT_GVS]
 		rightStartTrials.append(trial)
 		
 		# Right Triangle2 Right GVS
-		trial = [TWO_THREE_LEFT_TRIANGLE, NO_GVS]
+		trial = [TWO_THREE_RIGHT_TRIANGLE, NO_GVS]
 		rightStartTrials.append(trial)
 		rightStartTrials.append(trial)
 
