@@ -31,10 +31,10 @@ RIGHT_GVS 	= "RGVS"
 
 # Locations for cylinders during learning phase
 learnCylinderLocations = [
-	[-1.5,0,-1.5],
-	[-1.5,0,1.5],
-	[1.5,0,1.5],
-	[1.5,0,-1.5]]
+	[-1,0,-1.5],
+	[-1,0,1.5],
+	[1,0,1.5],
+	[1,0,-1.5]]
 	
 # 4 Triangles for testing
 BAD_LEFT_TRIANGLE = [
