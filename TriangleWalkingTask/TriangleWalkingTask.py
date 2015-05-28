@@ -37,18 +37,18 @@ learnCylinderLocations = [
 	[1,0,-1.5]]
 	
 # 4 Triangles for testing
-BAD_LEFT_TRIANGLE = [
+TWO_THREE_LEFT_TRIANGLE = [
 	[-1,0,-1.5],
-	[-1,0,1.5],
-	[1,0,1.5],
-	["BAD_LEFT"]
-]
-
-BAD_RIGHT_TRIANGLE = [
 	[1,0,-1.5],
 	[1,0,1.5],
+	["TWO_THREE_LEFT_TRIANGLE"]
+]
+
+TWO_THREE_RIGHT_TRIANGLE = [
+	[1,0,-1.5],
+	[-1,0,-1.5],
 	[-1,0,1.5],
-	["BAD_RIGHT"]
+	["TWO_THREE_RIGHT_TRIANGLE"]
 ]
 
 THREE_TWO_LEFT_TRIANGLE = [
